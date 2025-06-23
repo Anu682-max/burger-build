@@ -1,0 +1,131 @@
+.burger {
+  width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 3px solid #ddd;
+}
+
+.top-bun {
+  height: 60px;
+  width: 80%;
+  background: linear-gradient(135deg, #d4a574, #c19753);
+  border-radius: 50% 50% 0 0;
+  margin: 10px auto;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.seed1, .seed2, .seed3 {
+  width: 8px;
+  height: 8px;
+  background: #cc9a06;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.seed1 {
+  top: 40%;
+  left: 25%;
+}
+
+.seed2 {
+  top: 60%;
+  right: 30%;
+}
+
+.seed3 {
+  top: 30%;
+  left: 50%;
+}
+
+.bottom-bun {
+  height: 40px;
+  width: 80%;
+  background: linear-gradient(135deg, #c19753, #a67c3a);
+  border-radius: 0 0 30px 30px;
+  margin: 10px auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #8b4513;
+  font-weight: bold;
+}
+
+.ingredients {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 2px dashed #ccc;
+}
+
+.ingredients p {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.meat {
+  background: linear-gradient(135deg, #8b4513, #654321);
+  height: 35px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  line-height: 35px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  font-size: 1rem;
+}
+
+.cheese {
+  background: linear-gradient(135deg, #ffd700, #ffcc00);
+  height: 25px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 20px;
+  color: #333;
+  font-weight: bold;
+  line-height: 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}
+
+.salad {
+  background: linear-gradient(135deg, #90ee90, #32cd32);
+  height: 30px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 20px;
+  color: #2e8b57;
+  font-weight: bold;
+  line-height: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}
+
+.tomato {
+  background: linear-gradient(135deg, #ff6347, #dc143c);
+  height: 30px;
+  width: 80%;
+  margin: 5px auto;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  line-height: 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}

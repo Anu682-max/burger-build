@@ -1,0 +1,86 @@
+import React from 'react';
+import './control.css';
+import { useNavigate } from 'react-router-dom';
+
+function BuildControl(props) {
+  const navigate = useNavigate();
+  const handleOrder = () => {
+    navigate('/ordered', {
+      state: {
+        orderData: {
+          meat: props.meat,
+          cheese: props.cheese,
+          salad: props.salad,
+          tomato: props.tomato,
+          totalPrice: props.totalPrice(),
+        },
+      },
+    });
+  };
+
+  return (
+    <div className="controls">
+      <h2>Build Control</h2>
+
+      <div className="control-row">
+        <span className="ingredient-name"> Meat: {props.meat}</span>
+        <button onClick={props.addmeat} className="add-button">
+          Add Meat
+        </button>
+        <button
+          onClick={props.removeMeat}
+          className="remove-button"
+          disabled={props.meat === 0}
+        >
+          Remove Meat
+        </button>
+      </div>
+      <div className="control-row">
+        <span className="ingredient-name"> Cheese: {props.cheese}</span>
+        <button onClick={props.addcheese} className="add-button">
+          Add Cheese
+        </button>
+        <button
+          onClick={props.removeCheese}
+          className="remove-button"
+          disabled={props.cheese === 0}
+        >
+          Remove Cheese
+        </button>
+      </div>
+      <div className="control-row">
+        <span className="ingredient-name"> Salad: {props.salad}</span>
+        <button onClick={props.addsalad} className="add-button">
+          Add Salad
+        </button>
+        <button
+          onClick={props.removeSalad}
+          className="remove-button"
+          disabled={props.salad === 0}
+        >
+          Remove Salad
+        </button>
+      </div>
+      <div className="control-row">
+        <span className="ingredient-name"> Tomato: {props.tomato}</span>
+        <button onClick={props.addtomato} className="add-button">
+          Add Tomato
+        </button>
+        <button
+          onClick={props.removeTomato}
+          className="remove-button"
+          disabled={props.tomato === 0}
+        >
+          Remove Tomato
+        </button>
+      </div>
+
+      <button className="order-button" onClick={handleOrder}>
+        Order Now
+        <span className="total-price">Total Price: ${props.totalPrice()}</span>
+      </button>
+    </div>
+  );
+}
+
+export default BuildControl;
