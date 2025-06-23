@@ -1,9 +1,15 @@
 import './ordered.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function OrderedPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const orderData = location.state.orderData || {};
+  const handleDelivery = () => {
+    navigate('/delivery', {
+      state: { orderData },
+    });
+  };
 
   return (
     <div className="ordered-page">
@@ -18,6 +24,10 @@ function OrderedPage() {
         className="back-button"
       >
         Back to Burger Builder
+      </button>
+
+      <button onClick={handleDelivery} className="delivery-button">
+        Proceed to Delivery
       </button>
     </div>
   );

@@ -4,6 +4,7 @@ import Burger from './component/burgerbuild/burger';
 import BuildControl from './component/burgercontrol/control';
 import OrderedPage from './pages/ordered';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import DeliveryPage from './pages/delivery';
 
 function App() {
   const [meat, setMeat] = React.useState(0);
@@ -80,6 +81,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BurgerBuilderPage />} />
         <Route path="/ordered" element={<OrderedPage />} />
+        <Route path="/delivery" element={<DeliveryPage />} />
       </Routes>
     </BrowserRouter>
   );
