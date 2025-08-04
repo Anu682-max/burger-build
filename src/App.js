@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Burger from './component/burger';
+import BuildControl from './component/burgercontrol/control'; 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Burger Builder</h1>
+        <p>Build your own burger!</p>
       </header>
+      <main>
+        <section className="Burger-builder">
+         <Burger />
+         <BuildControl />
+        </section>
+      </main>
+      <footer className="App-footer">
+        <p>&copy; 2023 Burger Builder</p>
+      </footer>
     </div>
   );
 }

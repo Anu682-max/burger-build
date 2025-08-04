@@ -1,0 +1,153 @@
+.burger {
+    width: 300px;
+    margin: 20px auto;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+/* Дээд талын талх */
+.top-bun {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #bc581e, #d39e00);
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    margin-bottom: 2px;
+    border: 2px solid #8f4310;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Үрэнцэр */
+.seeds1, .seeds2, .seeds3 {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 15px;
+    border: 1px solid #ddd;
+}
+
+.seeds1 {
+    left: 30%;
+}
+
+.seeds2 {
+    right: 30%;
+}
+
+.seeds3 {
+    left: 50%;
+    top: 25px;
+}
+
+/* Мах */
+.meat {
+    width: 95%;
+    height: 40px;
+    background: linear-gradient(to bottom, #8B4513, #654321);
+    margin: 2px auto;
+    border-radius: 5px;
+    border: 2px solid #5d2f0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Бяслаг */
+.cheese {
+    width: 90%;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffd700, #ffb347);
+    margin: 2px auto;
+    border-radius: 3px;
+    border: 1px solid #daa520;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8B4513;
+    font-weight: bold;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Ногоон навч */
+.lettuce {
+    width: 85%;
+    height: 25px;
+    background: linear-gradient(to bottom, #228B22, #32CD32);
+    margin: 2px auto;
+    border-radius: 8px;
+    border: 1px solid #006400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.lettuce::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+    top: 20%;
+    border-radius: 8px;
+}
+
+/* Улаан лооль */
+.tomato {
+    width: 80%;
+    height: 15px;
+    background: linear-gradient(to bottom, #ff6347, #dc143c);
+    margin: 2px auto;
+    border-radius: 50px;
+    border: 1px solid #b22222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Доод талын талх */
+.bottom-bun {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, #d39e00, #bc581e);
+    border-radius: 0 0 30px 30px;
+    margin-top: 2px;
+    border: 2px solid #8f4310;
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover эффект */
+.burger:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive дизайн */
+@media (max-width: 768px) {
+    .burger {
+        width: 250px;
+        font-size: 1rem;
+    }
+    
+    .top-bun, .bottom-bun {
+        height: 50px;
+    }
+    
+    .meat {
+        height: 35px;
+    }
+}
