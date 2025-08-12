@@ -20,64 +20,64 @@ function BuildControl(props) {
 
   return (
     <div className="controls">
-      <h2>Build Control</h2>
+      <h2>Бүтээх Хяналт</h2>
 
       <div className="control-row">
-        <span className="ingredient-name"> Meat: {props.meat}</span>
+        <span className="ingredient-name">🥩 Мах: {props.meat}</span>
         <button onClick={props.addmeat} className="add-button">
-          Add Meat
+          Мах Нэмэх
         </button>
         <button
           onClick={props.removeMeat}
           className="remove-button"
           disabled={props.meat === 0}
         >
-          Remove Meat
+          Мах Хасах
         </button>
       </div>
       <div className="control-row">
-        <span className="ingredient-name"> Cheese: {props.cheese}</span>
+        <span className="ingredient-name">🧀 Бяслаг: {props.cheese}</span>
         <button onClick={props.addcheese} className="add-button">
-          Add Cheese
+          Бяслаг Нэмэх
         </button>
         <button
           onClick={props.removeCheese}
           className="remove-button"
           disabled={props.cheese === 0}
         >
-          Remove Cheese
+          Бяслаг Хасах
         </button>
       </div>
       <div className="control-row">
-        <span className="ingredient-name"> Salad: {props.salad}</span>
+        <span className="ingredient-name">🥬 Салат: {props.salad}</span>
         <button onClick={props.addsalad} className="add-button">
-          Add Salad
+          Салат Нэмэх
         </button>
         <button
           onClick={props.removeSalad}
           className="remove-button"
           disabled={props.salad === 0}
         >
-          Remove Salad
+          Салат Хасах
         </button>
       </div>
       <div className="control-row">
-        <span className="ingredient-name"> Tomato: {props.tomato}</span>
+        <span className="ingredient-name">🍅 Улаан лооль: {props.tomato}</span>
         <button onClick={props.addtomato} className="add-button">
-          Add Tomato
+          Улаан лооль Нэмэх
         </button>
         <button
           onClick={props.removeTomato}
           className="remove-button"
           disabled={props.tomato === 0}
         >
-          Remove Tomato
+          Улаан лооль Хасах
         </button>
       </div>
 
       <button className="order-button" onClick={handleOrder}>
-        Order Now
-        <span className="total-price">Total Price: ${props.totalPrice()}</span>
+        Захиалах
+        <span className="total-price">Нийт үнэ: ${props.totalPrice()}</span>
       </button>
     </div>
   );

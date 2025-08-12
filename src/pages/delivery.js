@@ -30,22 +30,22 @@ function DeliveryPage() {
 
   return (
     <div className="delivery-page">
-      <h2>Delivery Details</h2>
+      <h2>Хүргэлтийн дэлгэрэнгүй</h2>
 
       <div className="order-summary">
-        <p>Meat: {orderData.meat || 0}</p>
-        <p>Cheese: {orderData.cheese || 0}</p>
-        <p>Salad: {orderData.salad || 0}</p>
-        <p>Tomato: {orderData.tomato || 0}</p>
-        <h3>Total Price: ${orderData.totalPrice || '0.00'}</h3>
-        <p>Estimated Delivery Time: {formatTime(deliveryTime)}</p>
+        <p>🥩 Мах: {orderData.meat || 0}</p>
+        <p>🧀 Бяслаг: {orderData.cheese || 0}</p>
+        <p>🥬 Салат: {orderData.salad || 0}</p>
+        <p>🍅 Улаан лооль: {orderData.tomato || 0}</p>
+        <h3>Нийт үнэ: ${orderData.totalPrice || '0.00'}</h3>
+        <p>Хүргэлтийн тооцоолсон хугацаа: {formatTime(deliveryTime)}</p>
       </div>
 
       <button
         onClick={() => (window.location.href = '/')}
         className="back-button"
       >
-        Back to Burger Builder
+        Бургер бүтээгч рүү буцах
       </button>
     </div>
   );

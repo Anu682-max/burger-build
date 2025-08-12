@@ -5,6 +5,12 @@ import BuildControl from './component/burgercontrol/control';
 import OrderedPage from './pages/ordered';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DeliveryPage from './pages/delivery';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import Navbar from './component/navbar/Navbar';
+import OrdersPage from './pages/orders';
+
+
 
 function App() {
   const [meat, setMeat] = React.useState(0);
@@ -42,8 +48,8 @@ function App() {
   const BurgerBuilderPage = () => (
     <div className="App">
       <header className="App-header">
-        <h1>Burger Build</h1>
-        <p>Build your own burger!</p>
+        <h1>Бургер Бүтээгч</h1>
+        <p>Өөрийн бургерээ бүтээгээрэй!</p>
       </header>
       <main>
         <section className="burger-builder">
@@ -66,22 +72,26 @@ function App() {
           />
         </section>
         <section className="price-display">
-          <h2>Total Price: ${calculatePrice()}</h2>
-          <p>Base Price: ${baseBurgerPrice.toFixed(1)}</p>
+          <h2>Нийт үнэ: ${calculatePrice()}</h2>
+          <p>Үндсэн үнэ: ${baseBurgerPrice.toFixed(1)}</p>
         </section>
       </main>
       <footer className="App-footer">
-        <p>&copy; 2025 Burger Build</p>
+        <p>&copy; 2025 Бургер Бүтээгч</p>
       </footer>
     </div>
   );
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<BurgerBuilderPage />} />
         <Route path="/ordered" element={<OrderedPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
         <Route path="/delivery" element={<DeliveryPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
