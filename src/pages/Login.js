@@ -2,7 +2,6 @@ import React from "react";
 import { auth } from "../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate, Link } from "react-router-dom";
-import "./auth.css";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -24,8 +23,7 @@ export default function Login() {
     };
 
     return (
-        <div className="auth-container">
-            <div className="auth-form">
+        <div style={{ maxWidth: "400px", margin: "auto"}}>
                 <h2>Нэвтрэх</h2> 
                 <form onSubmit={onSubmit}>
                     <div>
@@ -40,7 +38,6 @@ export default function Login() {
                 </form>
                 <p>Бүртгэл байхгүй юу? <Link to="/register">Бүртгүүлэх</Link></p>
             </div>
-        </div>
     );
 }
 

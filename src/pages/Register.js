@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { auth } from "../firebase/config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import "./auth.css";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -17,7 +16,7 @@ export default function Register() {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
       if (displayName) await updateProfile(cred.user, { displayName });
-      
+
       alert("Хэрэглэгч амжилттай бүртгэгдлээ");
       navigate("/login");
     } catch (error) {
@@ -27,8 +26,7 @@ export default function Register() {
     };
 
     return (
-        <div className="auth-container">
-            <div className="auth-form">
+        <div style={{ maxWidth: "400px", margin: "auto"}}>
                 <h2>Бүртгүүлэх</h2>
                 <form onSubmit={onSubmit}>
                     <div>
@@ -47,6 +45,5 @@ export default function Register() {
                 </form>
                 <p>Бүртгэлтэй юу? <Link to="/login">Нэвтрэх</Link></p>
             </div>
-        </div>
     );
 }
