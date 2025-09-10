@@ -23,6 +23,7 @@ function OrderedPage() {
       if (!currentUser) {
         alert('Энэ хуудсыг үзэхийн тулд нэвтэрч орно уу.');
         navigate('/login');
+        
       }
     });
 

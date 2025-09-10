@@ -84,12 +84,12 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<BurgerBuilderPage />} />
-        <Route path="/ordered" element={<OrderedPage />} />
-        <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/delivery" element={<DeliveryPage />} />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<BurgerBuilderPage />} />
+          <Route path="/ordered" element={<OrderedPage />} />
+          <Route path="/orders" element={<OrdersPage />} />
+          <Route path="/delivery" element={<DeliveryPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </Routes>
